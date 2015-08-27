@@ -1,0 +1,6 @@
+C:\Users\Achavez\Documents\Visual Studio 2013\Projects\Sonsv\Sonsv\bin\Sonsv.dll.config
+C:\Users\Achavez\Documents\Visual Studio 2013\Projects\Sonsv\Sonsv\bin\Sonsv.dll
+C:\Users\Achavez\Documents\Visual Studio 2013\Projects\Sonsv\Sonsv\bin\Sonsv.pdb
+C:\Users\Achavez\Documents\Visual Studio 2013\Projects\Sonsv\Sonsv\obj\Debug\Sonsv.csprojResolveAssemblyReference.cache
+C:\Users\Achavez\Documents\Visual Studio 2013\Projects\Sonsv\Sonsv\obj\Debug\Sonsv.dll
+C:\Users\Achavez\Documents\Visual Studio 2013\Projects\Sonsv\Sonsv\obj\Debug\Sonsv.pdb
