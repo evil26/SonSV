@@ -1,0 +1,6 @@
+C:\Users\Miriam\Documents\GitHub\Sonsv\bin\Sonsv.dll.config
+C:\Users\Miriam\Documents\GitHub\Sonsv\bin\Sonsv.dll
+C:\Users\Miriam\Documents\GitHub\Sonsv\bin\Sonsv.pdb
+C:\Users\Miriam\Documents\GitHub\Sonsv\obj\Debug\Sonsv.csprojResolveAssemblyReference.cache
+C:\Users\Miriam\Documents\GitHub\Sonsv\obj\Debug\Sonsv.dll
+C:\Users\Miriam\Documents\GitHub\Sonsv\obj\Debug\Sonsv.pdb
