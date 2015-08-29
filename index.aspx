@@ -358,8 +358,8 @@ License: You must have a valid license purchased only from themeforest(the above
                         <div class="portlet light">
                             <div class="portlet-title">
                                 <div class="caption font-dark">
-                                    <span class="caption-subject bold uppercase">Distance</span>
-                                    <span class="caption-helper">distance stats...</span>
+                                    <span class="caption-subject bold uppercase">ñajdñlsajldjaslkdjlkjlaksjldkjaslk</span>
+                                    <span class="caption-helper">adasdassdasstats...</span>
                                 </div>
                                 <div class="actions">
                                     <a href="#" class="btn btn-circle btn-default btn-sm">
