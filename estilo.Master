@@ -133,13 +133,13 @@
 				<li class="start ">
 					<a href="index.html">
 					<i class="icon-home"></i>
-					<span class="title">Dashboard</span>
+					<span class="title">Tablero</span>
 					</a>
 				</li>
 				<li>
 					<a href="javascript:;">
 					<i class="icon-basket"></i>
-					<span class="title">eCommerce</span>
+					<span class="title">Solicitar</span>
 					<span class="arrow "></span>
 					</a>
 					<ul class="sub-menu">
