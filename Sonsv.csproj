@@ -3815,6 +3815,7 @@
     <Content Include="assets\global\plugins\zoom\jquery.zoom.min.js" />
     <Content Include="assets\global\scripts\datatable.js" />
     <Content Include="assets\global\scripts\metronic.js" />
+    <Content Include="prueba.html" />
     <Content Include="Tablero.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
