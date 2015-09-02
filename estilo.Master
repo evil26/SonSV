@@ -1,0 +1,439 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="estilo.master.cs" Inherits="Sonsv.estilo" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta charset="utf-8"/>
+<title>SONSV</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<!-- BEGIN GLOBAL MANDATORY STYLES -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link href="assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+<!-- END GLOBAL MANDATORY STYLES -->
+<!-- BEGIN THEME STYLES -->
+<link href="assets/global/css/components-md.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="assets/global/css/plugins-md.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout4/css/layout.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="assets/admin/layout4/css/themes/default.css" rel="stylesheet" type="text/css"/>
+<link href="assets/admin/layout4/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- END THEME STYLES -->
+<link rel="shortcut icon" href="favicon.ico"/>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<body class="page-md page-sidebar-closed-hide-logo page-header-fixed page-sidebar-fixed page-footer-fixed">
+<!-- BEGIN HEADER -->
+<div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
+	<!-- BEGIN HEADER INNER -->
+	<div class="page-header-inner">
+		<!-- BEGIN LOGO -->
+		<div class="page-logo">
+			<a href="Tablero.aspx">
+			<img src="assets/admin/layout4/img/logo-light.png" alt="logo" class="logo-default"/>
+			</a>
+<%--			<div class="menu-toggler sidebar-toggler">
+				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+			</div>--%>
+		</div>
+		<!-- END LOGO -->
+		<!-- BEGIN RESPONSIVE MENU TOGGLER -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		</a>
+		<!-- END RESPONSIVE MENU TOGGLER -->
+		<!-- BEGIN PAGE TOP -->
+		<div class="page-top">
+			<!-- BEGIN HEADER SEARCH BOX -->
+			<!-- DOC: Apply "search-form-expanded" right after the "search-form" class to have half expanded search box -->
+			<form class="search-form" action="extra_search.html" method="GET">
+				<div class="input-group">
+					<input type="text" class="form-control input-sm" placeholder="Buscar..." name="query"/>
+					<span class="input-group-btn">
+					<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+					</span>
+				</div>
+			</form>
+			<!-- END HEADER SEARCH BOX -->
+			<!-- BEGIN TOP NAVIGATION MENU -->
+			<div class="top-menu">
+				<ul class="nav navbar-nav pull-right">
+<%--					<li class="separator hide">
+					</li>--%>
+					<!-- BEGIN NOTIFICATION DROPDOWN -->
+					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+
+					<!-- END TODO DROPDOWN -->
+					<!-- BEGIN USER LOGIN DROPDOWN -->
+					<!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+					<li class="dropdown dropdown-user dropdown-dark">
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<span class="username username-hide-on-mobile">
+						Joaquin Campa </span>
+						<!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+						<img alt="" class="img-circle" src="assets/admin/layout4/img/avatar9.jpg"/>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-default">
+							<li>
+								<a href="extra_profile.html">
+								<i class="icon-user"></i> Mi Perfil </a>
+							</li>
+							<li>
+								<a href="inbox.html">
+								<i class="icon-envelope-open"></i> Mi Bandeja <span class="badge badge-danger">
+								3 </span>
+								</a>
+							</li>
+							<li class="divider">
+							</li>
+							<li>
+								<a href="login.html">
+								<i class="icon-key"></i> Salir </a>
+							</li>
+						</ul>
+					</li>
+					<!-- END USER LOGIN DROPDOWN -->
+				</ul>
+			</div>
+			<!-- END TOP NAVIGATION MENU -->
+		</div>
+		<!-- END PAGE TOP -->
+	</div>
+	<!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+	<!-- BEGIN SIDEBAR -->
+	<div class="page-sidebar-wrapper">
+		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+		<div class="page-sidebar md-shadow-z-2-i  navbar-collapse collapse">
+			<!-- BEGIN SIDEBAR MENU -->
+			<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+			<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+			<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+			<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+				<li class="start ">
+					<a href="index.html">
+					<i class="icon-home"></i>
+					<span class="title">Dashboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-basket"></i>
+					<span class="title">eCommerce</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="ecommerce_index.html">
+							<i class="icon-home"></i>
+							Dashboard</a>
+						</li>
+						<li>
+							<a href="ecommerce_orders.html">
+							<i class="icon-basket"></i>
+							Orders</a>
+						</li>
+						<li>
+							<a href="ecommerce_orders_view.html">
+							<i class="icon-tag"></i>
+							Order View</a>
+						</li>
+						<li>
+							<a href="ecommerce_products.html">
+							<i class="icon-handbag"></i>
+							Products</a>
+						</li>
+						<li>
+							<a href="ecommerce_products_edit.html">
+							<i class="icon-pencil"></i>
+							Product Edit</a>
+						</li>
+					</ul>
+				</li>
+				<li class="active open">
+					<a href="javascript:;">
+					<i class="icon-rocket"></i>
+					<span class="title">Page Layouts</span>
+					<span class="arrow open"></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="layout_sidebar_reversed.html">
+							<span class="badge badge-warning">new</span>Right Sidebar Page</a>
+						</li>
+						<li>
+							<a href="layout_sidebar_fixed.html">
+							Sidebar Fixed Page</a>
+						</li>
+						<li>
+							<a href="layout_sidebar_closed.html">
+							Sidebar Closed Page</a>
+						</li>
+						<li class="active">
+							<a href="layout_blank_page.html">
+							Blank Page</a>
+						</li>
+						<li>
+							<a href="layout_boxed_page.html">
+							Boxed Page</a>
+						</li>
+						<li>
+							<a href="layout_language_bar.html">
+							Language Switch Bar</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-diamond"></i>
+					<span class="title">UI Features</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="ui_general.html">
+							General Components</a>
+						</li>
+						<li>
+							<a href="ui_buttons.html">
+							Buttons</a>
+						</li>
+						<li>
+							<a href="ui_icons.html">
+							<span class="badge badge-danger">new</span>Font Icons</a>
+						</li>
+						<li>
+							<a href="ui_colors.html">
+							Flat UI Colors</a>
+						</li>
+						<li>
+							<a href="ui_typography.html">
+							Typography</a>
+						</li>
+						<li>
+							<a href="ui_tabs_accordions_navs.html">
+							Tabs, Accordions & Navs</a>
+						</li>
+						<li>
+							<a href="ui_tree.html">
+							<span class="badge badge-danger">new</span>Tree View</a>
+						</li>
+						<li>
+							<a href="ui_page_progress_style_1.html">
+							<span class="badge badge-warning">new</span>Page Progress Bar - Style 1</a>
+						</li>
+						<li>
+							<a href="ui_blockui.html">
+							Block UI</a>
+						</li>
+						<li>
+							<a href="ui_bootstrap_growl.html">
+							<span class="badge badge-roundless badge-warning">new</span>Bootstrap Growl Notifications</a>
+						</li>
+						<li>
+							<a href="ui_notific8.html">
+							Notific8 Notifications</a>
+						</li>
+						<li>
+							<a href="ui_toastr.html">
+							Toastr Notifications</a>
+						</li>
+						<li>
+							<a href="ui_alert_dialog_api.html">
+							<span class="badge badge-danger">new</span>Alerts & Dialogs API</a>
+						</li>
+						<li>
+							<a href="ui_session_timeout.html">
+							Session Timeout</a>
+						</li>
+						<li>
+							<a href="ui_idle_timeout.html">
+							User Idle Timeout</a>
+						</li>
+						<li>
+							<a href="ui_modals.html">
+							Modals</a>
+						</li>
+						<li>
+							<a href="ui_extended_modals.html">
+							Extended Modals</a>
+						</li>
+						<li>
+							<a href="ui_tiles.html">
+							Tiles</a>
+						</li>
+						<li>
+							<a href="ui_datepaginator.html">
+							<span class="badge badge-success">new</span>Date Paginator</a>
+						</li>
+						<li>
+							<a href="ui_nestable.html">
+							Nestable List</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+					<i class="icon-puzzle"></i>
+					<span class="title">UI Components</span>
+					<span class="arrow "></span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="components_pickers.html">
+							Date & Time Pickers</a>
+						</li>
+						<li>
+							<a href="components_context_menu.html">
+							Context Menu</a>
+						</li>
+						<li>
+							<a href="components_dropdowns.html">
+							Custom Dropdowns</a>
+						</li>
+						<li>
+							<a href="components_form_tools.html">
+							Form Widgets & Tools</a>
+						</li>
+						<li>
+							<a href="components_form_tools2.html">
+							Form Widgets & Tools 2</a>
+						</li>
+						<li>
+							<a href="components_editors.html">
+							Markdown & WYSIWYG Editors</a>
+						</li>
+						<li>
+							<a href="components_ion_sliders.html">
+							Ion Range Sliders</a>
+						</li>
+						<li>
+							<a href="components_noui_sliders.html">
+							NoUI Range Sliders</a>
+						</li>
+						<li>
+							<a href="components_jqueryui_sliders.html">
+							jQuery UI Sliders</a>
+						</li>
+						<li>
+							<a href="components_knob_dials.html">
+							Knob Circle Dials</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">Modal title</h4>
+						</div>
+						<div class="modal-body">
+							 Widget settings form goes here
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn blue">Save changes</button>
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN PAGE HEADER-->
+			<!-- BEGIN PAGE HEAD -->
+			<div class="page-head">
+				<!-- BEGIN PAGE TITLE -->
+				<div class="page-title">
+					<h1>Blank Page <small>blank page</small></h1>
+				</div>
+				<!-- END PAGE TITLE -->
+			</div>
+			<!-- END PAGE HEAD -->
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-12">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+		</div>
+	</div>
+	<!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+	<div class="page-footer-inner">
+		 2015 &copy; Sonora sin violencia vial.
+	</div>
+	<div class="scroll-to-top">
+		<i class="icon-arrow-up"></i>
+	</div>
+</div>
+<!-- END FOOTER -->
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="assets/global/plugins/respond.min.js"></script>
+<script src="assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="assets/admin/layout4/scripts/layout.js" type="text/javascript"></script>
+<script src="assets/admin/layout4/scripts/demo.js" type="text/javascript"></script>
+<script>
+    jQuery(document).ready(function () {
+        Metronic.init(); // init metronic core components
+        Layout.init(); // init current layout
+        Demo.init(); // init demo features
+    });
+   </script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
