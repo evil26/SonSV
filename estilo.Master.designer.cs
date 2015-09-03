@@ -40,6 +40,33 @@ namespace Sonsv {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
+        /// liTablero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liTablero;
+        
+        /// <summary>
+        /// liAlta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liAlta;
+        
+        /// <summary>
+        /// lblSubtitulo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblSubtitulo;
+        
+        /// <summary>
         /// ContentPlaceHolder1 control.
         /// </summary>
         /// <remarks>

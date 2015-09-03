@@ -79,6 +79,7 @@
     <Content Include="assets\admin\layout4\img\avatar7.jpg" />
     <Content Include="assets\admin\layout4\img\avatar8.jpg" />
     <Content Include="assets\admin\layout4\img\avatar9.jpg" />
+    <Content Include="assets\admin\layout4\img\header.png" />
     <Content Include="assets\admin\layout4\img\hor-menu-red-arrow.png" />
     <Content Include="assets\admin\layout4\img\icon-color-close.png" />
     <Content Include="assets\admin\layout4\img\icon-color.png" />
@@ -94,6 +95,7 @@
     <Content Include="assets\admin\layout4\img\logo-default.png" />
     <Content Include="assets\admin\layout4\img\logo-light.png" />
     <Content Include="assets\admin\layout4\img\logo.png" />
+    <Content Include="assets\admin\layout4\img\logosonsv.png" />
     <Content Include="assets\admin\layout4\img\menu-toggler.png" />
     <Content Include="assets\admin\layout4\img\photo1.jpg" />
     <Content Include="assets\admin\layout4\img\photo2.jpg" />

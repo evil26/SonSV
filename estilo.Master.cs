@@ -16,12 +16,14 @@ namespace Sonsv
             //liItem.Attributes.Add("class", "someCssClass");
             switch (Page.Title)
             {
-                //case "Tablero":
-                //    liTablero.Attributes.Add("class", "dropdown dropdown-fw open selected");
-                //    break;
-                //case "AltaSolicitud":
-                //    liSolicitar.Attributes.Add("class", "dropdown dropdown-fw open selected");
-                //    break;
+                case "Tablero":
+                    lblSubtitulo.InnerText = "Bienvenido a Sonora sin violencia vial";
+                    liTablero.Attributes.Add("class", "start active");
+                    break;
+                case "AltaSolicitud":
+                    lblSubtitulo.InnerText = "Levanta tu solicitud";
+                    liAlta.Attributes.Add("class", "start active");
+                    break;
                 //case "AltaSolicitud":
                 //    liSolicitar.Attributes.Add("class", "dropdown dropdown-fw open selected");
                 //    break;
