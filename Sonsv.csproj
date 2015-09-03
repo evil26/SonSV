@@ -3817,7 +3817,7 @@
     <Content Include="assets\global\plugins\zoom\jquery.zoom.min.js" />
     <Content Include="assets\global\scripts\datatable.js" />
     <Content Include="assets\global\scripts\metronic.js" />
-    <Content Include="prueba.html" />
+    <Content Include="index.aspx" />
     <Content Include="Tablero.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -3835,6 +3835,13 @@
     </Compile>
     <Compile Include="estilo.Master.designer.cs">
       <DependentUpon>estilo.Master</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tablero.aspx.cs">
       <DependentUpon>Tablero.aspx</DependentUpon>
@@ -4465,6 +4472,7 @@
     <Content Include="assets\global\plugins\uniform\css\uniform.default.scss" />
     <Content Include="assets\global\plugins\uniform\README.md" />
     <Content Include="estilo.Master" />
+    <None Include="Properties\PublishProfiles\FileZila.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
