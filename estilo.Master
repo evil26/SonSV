@@ -139,11 +139,11 @@
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
-                            <li>
+                            <li  id="liSolicitar" runat="server">
                                 <a href="AltaSolicitud.aspx">Solicitar Auditoria</a>
                             </li>
                             <li>
-                                <a href="layout_sidebar_fixed.html">Buscar Solicitud</a>
+                                <a href="#">Buscar Solicitud</a>
                             </li>
                         </ul>
                     </li>

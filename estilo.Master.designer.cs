@@ -58,6 +58,15 @@ namespace Sonsv {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liAlta;
         
         /// <summary>
+        /// liSolicitar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liSolicitar;
+        
+        /// <summary>
         /// lblSubtitulo control.
         /// </summary>
         /// <remarks>

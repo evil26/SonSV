@@ -23,6 +23,7 @@ namespace Sonsv
                 case "AltaSolicitud":
                     lblSubtitulo.InnerText = "Levanta tu solicitud";
                     liAlta.Attributes.Add("class", "start active");
+                    liSolicitar.Attributes.Add("class", "active");
                     break;
                 //case "AltaSolicitud":
                 //    liSolicitar.Attributes.Add("class", "dropdown dropdown-fw open selected");
