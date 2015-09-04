@@ -22,12 +22,14 @@ namespace Sonsv
                     break;
                 case "AltaSolicitud":
                     lblSubtitulo.InnerText = "Levanta tu solicitud";
-                    liAlta.Attributes.Add("class", "start active");
+                    liAlta.Attributes.Add("class", "active open");
                     liSolicitar.Attributes.Add("class", "active");
                     break;
-                //case "AltaSolicitud":
-                //    liSolicitar.Attributes.Add("class", "dropdown dropdown-fw open selected");
-                //    break;
+                case "Buscar Solicitud":
+                    lblSubtitulo.InnerText = "Visualiza cualquier solicitud del estado de sonora";
+                    liAlta.Attributes.Add("class", "active open");
+                    liBuscarSolicitud.Attributes.Add("class", "active");
+                    break;
                 //case "AltaSolicitud":
                 //    liSolicitar.Attributes.Add("class", "dropdown dropdown-fw open selected");
                 //    break;

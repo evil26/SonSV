@@ -106,6 +106,71 @@
     <Content Include="assets\admin\layout4\scripts\demo.js" />
     <Content Include="assets\admin\layout4\scripts\layout.js" />
     <Content Include="assets\admin\layout4\scripts\quick-sidebar.js" />
+    <Content Include="assets\admin\layout\css\custom.css" />
+    <Content Include="assets\admin\layout\css\layout.css" />
+    <Content Include="assets\admin\layout\css\themes\blue.css" />
+    <Content Include="assets\admin\layout\css\themes\darkblue.css" />
+    <Content Include="assets\admin\layout\css\themes\default.css" />
+    <Content Include="assets\admin\layout\css\themes\grey.css" />
+    <Content Include="assets\admin\layout\css\themes\light.css" />
+    <Content Include="assets\admin\layout\css\themes\light2.css" />
+    <Content Include="assets\admin\layout\img\ajax-loading.gif" />
+    <Content Include="assets\admin\layout\img\ajax-modal-loading.gif" />
+    <Content Include="assets\admin\layout\img\arrow-down.png" />
+    <Content Include="assets\admin\layout\img\avatar.png" />
+    <Content Include="assets\admin\layout\img\avatar1.jpg" />
+    <Content Include="assets\admin\layout\img\avatar10.jpg" />
+    <Content Include="assets\admin\layout\img\avatar11.jpg" />
+    <Content Include="assets\admin\layout\img\avatar1_small.jpg" />
+    <Content Include="assets\admin\layout\img\avatar2.jpg" />
+    <Content Include="assets\admin\layout\img\avatar3.jpg" />
+    <Content Include="assets\admin\layout\img\avatar3_small.jpg" />
+    <Content Include="assets\admin\layout\img\avatar4.jpg" />
+    <Content Include="assets\admin\layout\img\avatar5.jpg" />
+    <Content Include="assets\admin\layout\img\avatar6.jpg" />
+    <Content Include="assets\admin\layout\img\avatar7.jpg" />
+    <Content Include="assets\admin\layout\img\avatar8.jpg" />
+    <Content Include="assets\admin\layout\img\avatar9.jpg" />
+    <Content Include="assets\admin\layout\img\hor-menu-red-arrow.png" />
+    <Content Include="assets\admin\layout\img\icon-color-close.png" />
+    <Content Include="assets\admin\layout\img\icon-color.png" />
+    <Content Include="assets\admin\layout\img\icon-img-down.png" />
+    <Content Include="assets\admin\layout\img\icon-img-up.png" />
+    <Content Include="assets\admin\layout\img\inbox-nav-arrow-blue.png" />
+    <Content Include="assets\admin\layout\img\loading-spinner-blue.gif" />
+    <Content Include="assets\admin\layout\img\loading-spinner-default.gif" />
+    <Content Include="assets\admin\layout\img\loading-spinner-grey.gif" />
+    <Content Include="assets\admin\layout\img\loading.gif" />
+    <Content Include="assets\admin\layout\img\logo-big-white.png" />
+    <Content Include="assets\admin\layout\img\logo-big.png" />
+    <Content Include="assets\admin\layout\img\logo-invert.png" />
+    <Content Include="assets\admin\layout\img\logo.png" />
+    <Content Include="assets\admin\layout\img\menu-toggler.png" />
+    <Content Include="assets\admin\layout\img\photo1.jpg" />
+    <Content Include="assets\admin\layout\img\photo2.jpg" />
+    <Content Include="assets\admin\layout\img\photo3.jpg" />
+    <Content Include="assets\admin\layout\img\remove-icon-small.png" />
+    <Content Include="assets\admin\layout\img\search_icon_light.png" />
+    <Content Include="assets\admin\layout\img\sidebar-menu-arrow-reverse.png" />
+    <Content Include="assets\admin\layout\img\sidebar-menu-arrow-right.png" />
+    <Content Include="assets\admin\layout\img\sidebar-menu-arrow.png" />
+    <Content Include="assets\admin\layout\img\sidebar_arrow_icon_light.png" />
+    <Content Include="assets\admin\layout\img\sidebar_arrow_icon_light_rtl.png" />
+    <Content Include="assets\admin\layout\img\sidebar_inline_toggler_icon_blue.jpg" />
+    <Content Include="assets\admin\layout\img\sidebar_inline_toggler_icon_darkblue.jpg" />
+    <Content Include="assets\admin\layout\img\sidebar_inline_toggler_icon_default.jpg" />
+    <Content Include="assets\admin\layout\img\sidebar_inline_toggler_icon_grey.jpg" />
+    <Content Include="assets\admin\layout\img\sidebar_inline_toggler_icon_light.jpg" />
+    <Content Include="assets\admin\layout\img\sidebar_inline_toggler_icon_light2.jpg" />
+    <Content Include="assets\admin\layout\img\sidebar_toggler_icon_blue.png" />
+    <Content Include="assets\admin\layout\img\sidebar_toggler_icon_darkblue.png" />
+    <Content Include="assets\admin\layout\img\sidebar_toggler_icon_default.png" />
+    <Content Include="assets\admin\layout\img\sidebar_toggler_icon_grey.png" />
+    <Content Include="assets\admin\layout\img\sidebar_toggler_icon_light.png" />
+    <Content Include="assets\admin\layout\img\sidebar_toggler_icon_light2.png" />
+    <Content Include="assets\admin\layout\scripts\demo.js" />
+    <Content Include="assets\admin\layout\scripts\layout.js" />
+    <Content Include="assets\admin\layout\scripts\quick-sidebar.js" />
     <Content Include="assets\admin\pages\css\about-us.css" />
     <Content Include="assets\admin\pages\css\blog.css" />
     <Content Include="assets\admin\pages\css\coming-soon.css" />
@@ -3817,6 +3882,7 @@
     <Content Include="assets\global\plugins\zoom\jquery.zoom.min.js" />
     <Content Include="assets\global\scripts\datatable.js" />
     <Content Include="assets\global\scripts\metronic.js" />
+    <Content Include="BuscarSolicitud.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Tablero.aspx" />
     <Content Include="Web.config" />
@@ -3828,6 +3894,13 @@
     </Compile>
     <Compile Include="AltaSolicitud.aspx.designer.cs">
       <DependentUpon>AltaSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarSolicitud.aspx.cs">
+      <DependentUpon>BuscarSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuscarSolicitud.aspx.designer.cs">
+      <DependentUpon>BuscarSolicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="estilo.Master.cs">
       <DependentUpon>estilo.Master</DependentUpon>

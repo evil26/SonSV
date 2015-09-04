@@ -1,363 +1,162 @@
 ﻿<%@ Page Title="AltaSolicitud" Language="C#" MasterPageFile="~/estilo.Master" AutoEventWireup="true" CodeBehind="AltaSolicitud.aspx.cs" Inherits="Sonsv.AltaSolicitud" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script>
+        var geocoder;
+        var map;
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(29.3954505, -111.7385201);
+            var mapOptions = {
+                zoom: 7,
+                center: latlng
+            }
+            map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+
+        function codeAddress() {
+            var address = document.getElementById("address").value;
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    map.setZoom(16);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+                    //alert(latitude + ' ' + longitude);
+                    document.getElementById("lbllatitud").innerText = latitude + ',' + longitude;
+                }
+                else {
+                    //alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
-        <div class="col-md-6">
-            <!-- BEGIN SAMPLE FORM PORTLET-->
+        <div class="col-md-7">
             <div class="portlet light">
                 <div class="portlet-title">
-                    <div class="caption font-green">
-                        <i class="icon-pin font-green"></i>
-                        <span class="caption-subject bold uppercase">Alta de solicitud para auditoria vial</span>
+                    <div class="caption font-blue-madison">
+                        <i class="icon-settings font-blue-madison"></i>
+                        <span class="caption-subject bold uppercase">Registra tu solicitud</span>
                     </div>
                     <div class="actions">
-                        <a class="btn btn-circle btn-icon-only blue" href="javascript:;">
-                            <i class="icon-cloud-upload"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only green" href="javascript:;">
-                            <i class="icon-wrench"></i>
-                        </a>
                         <a class="btn btn-circle btn-icon-only red" href="javascript:;">
                             <i class="icon-trash"></i>
                         </a>
                         <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title=""></a>
                     </div>
                 </div>
-                <div class="portlet-body form">
-
-                    <div class="form-body  ">
-                        <div class="form-group form-md-line-input form-md-floating-label">
-                            <input type="text" class="form-control" id="tbNombre" />
-                            <label for="form_control_1">Nombre</label>
-                            <%--<span class="help-block">Some help goes here...</span>--%>
+                <div class="portlet-body">
+                    <h4>Datos Personales</h4>
+                    <form class="form-horizontal margin-bottom-40" role="form">
+                        <div class="form-group form-md-line-input has-success">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="tbNombre" placeholder="Nombre" />
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
+                            <div class="input col-md-3">
+                                <input class="form-control" id="mask_phone" type="text" placeholder="Celular" />
+                                <span class="help-block">(999) 999-9999 </span>
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
+                            <div class="input col-md-4">
+                                <input type="email" class="form-control" placeholder="Email" />
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group form-md-line-input form-md-floating-label">
-                            <input type="text" class="form-control" id="tbTelefono" />
-                            <label for="form_control_1">Telefono</label>
-                            <%--<span class="help-block">Some help goes here...</span>--%>
+                    </form>
+                    <h4>Detalle del problema</h4>
+                    <form class="form-horizontal margin-bottom-40" role="form">
+                        <div class="form-group form-md-line-input has-success">
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" id="tbCalle" placeholder="Calle" />
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
+                            <div class="input col-md-2">
+                                <input class="form-control" id="tbNumero" type="text" placeholder="Número" />
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
+                            <div class="input col-md-4">
+                                <input type="email" class="form-control" placeholder="Entre que Calles" />
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
+                            <div class="input col-md-3">
+                                <input type="email" class="form-control" placeholder="Colonia" />
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <textarea class="form-control" rows="6" placeholder="Descripción"></textarea>
+                                <span class="help-block">Describe lo mejor que puedas el problema. </span>
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-md-5">
+                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                    <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" />
+                                    </div>
+                                    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
+                                    </div>
+                                    <div>
+                                        <span class="btn default btn-file">
+                                            <span class="fileinput-new">Seleccionar imagen </span>
+                                            <span class="fileinput-exists">Cambiar </span>
+                                            <input type="file" name="..." />
+                                        </span>
+                                        <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput">Quitar </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <div class="form-group form-md-line-input form-md-floating-label ">
-                            <input type="text" class="form-control" id="tbEmail" />
-                            <label for="form_control_1">Email</label>
-                        </div>
-                        <div class="form-group form-md-line-input form-md-floating-label">
-                            <input type="text" class="form-control" id="tbCalle" />
-                            <label for="form_control_1">Calle</label>
-                        </div>
-                        <div class="form-group form-md-line-input form-md-floating-label ">
-                            <input type="text" class="form-control" id="tbCalle2" />
-                            <label for="form_control_1">Calle2</label>
-                        </div>
-
-                        <div class="form-group form-md-line-input form-md-floating-label ">
-                            <input type="text" class="form-control" id="tbCalle3" />
-                            <label for="form_control_1">Calle 3</label>
-                        </div>
-                        <div class="form-group form-md-line-input form-md-floating-label   ">
-                            <input type="text" class="form-control" id="tbColonia" />
-                            <label for="form_control_1">Colonia</label>
-                        </div>
-
-
-                        <div class="form-group form-md-line-input form-md-floating-label ">
-                            <input type="text" class="form-control" id="tbNumero" />
-                            <label for="form_control_1">Numero de casa</label>
-                        </div>
-                        <div class="form-group form-md-line-input form-md-floating-label">
-                            <textarea class="form-control" rows="5" id="tbDescripcion"></textarea>
-                            <label for="form_control_1">Descripción</label>
-                        </div>
-                    </div>
-                    <div class="form-actions noborder">
-                        <button type="button" class="btn blue">Submit</button>
-                        <button type="button" class="btn default">Cancel</button>
+                    </form>
+                    <button type="button" class="btn btn-success">Enviar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption font-blue-madison">
+                        <i class="icon-settings font-blue-madison"></i>
+                        <span class="caption-subject bold uppercase">Para una mayor referencia del siniestro</span>
                     </div>
 
                 </div>
+                <div class="portlet-body">
+                    <form class="form-horizontal margin-bottom-40" role="form">
+                        <div class="form-group form-md-line-input has-success">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="address" placeholder="Calle o Avenida Número, Ciudad, Estado" />
+                                <span class="help-block">Ejemplo: Veredas 17, Hermosillo, Sonora</span>
+                                <div class="form-control-focus">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-success" onclick="codeAddress()">Buscar</button>
+                            </div>
+                            <div class="col-md-2">
+                                <label id="lbllatitud"></label>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="map" style="width: 100%; height: 373px;"></div>
+                </div>
             </div>
-            <!-- END SAMPLE FORM PORTLET-->
-        </div>
-        <div class="col-md-6">
-            <div class="container">
-			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-			<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title">Modal title</h4>
-						</div>
-						<div class="modal-body">
-							 Widget settings form goes here
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn blue">Save changes</button>
-							<button type="button" class="btn default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-					<!-- /.modal-content -->
-				</div>
-				<!-- /.modal-dialog -->
-			</div>
-			<!-- /.modal -->
-			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-			<!-- BEGIN PAGE BREADCRUMB -->
-			<ul class="page-breadcrumb breadcrumb">
-				<li>
-					<a href="#">Home</a><i class="fa fa-circle"></i>
-				</li>
-				<li>
-					<a href="maps_google.html">Extra</a>
-					<i class="fa fa-circle"></i>
-				</li>
-				<li>
-					<a href="maps_google.html">Maps</a>
-					<i class="fa fa-circle"></i>
-				</li>
-				<li class="active">
-					 Google Maps
-				</li>
-			</ul>
-			<!-- END PAGE BREADCRUMB -->
-			<!-- BEGIN PAGE CONTENT INNER -->
-			<div class="row">
-				<div class="col-md-6">
-					<!-- BEGIN BASIC PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Basic
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div id="gmap_basic" class="gmaps">
-							</div>
-						</div>
-					</div>
-					<!-- END BASIC PORTLET-->
-				</div>
-				<div class="col-md-6">
-					<!-- BEGIN MARKERS PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Markers
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div id="gmap_marker" class="gmaps">
-							</div>
-						</div>
-					</div>
-					<!-- END MARKERS PORTLET-->
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<!-- BEGIN GEOLOCATION PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Geolocation
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="label label-danger visible-ie8">
-								 Not supported in Internet Explorer 8
-							</div>
-							<div id="gmap_geo" class="gmaps">
-							</div>
-						</div>
-					</div>
-					<!-- END GEOLOCATION PORTLET-->
-				</div>
-				<div class="col-md-6">
-					<!-- BEGIN POLYLINES PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Polylines
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div id="gmap_polylines" class="gmaps">
-							</div>
-						</div>
-					</div>
-					<!-- END POLYLINES PORTLET-->
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<!-- BEGIN POLYGONS PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Polygons
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="label label-danger visible-ie8">
-								 Not supported in Internet Explorer 8
-							</div>
-							<div id="gmap_polygons" class="gmaps">
-							</div>
-						</div>
-					</div>
-					<!-- END POLYGONS PORTLET-->
-				</div>
-				<div class="col-md-6">
-					<!-- BEGIN STATIC PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Static
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div id="gmap_static" class="gmaps">
-								<div style="height:100%;overflow:hidden;display:block;background: url(http://maps.googleapis.com/maps/api/staticmap?center=48.858271,2.294264&amp;size=640x300&amp;sensor=true&amp;zoom=5) no-repeat 50% 50%;">
-									<img src="http://maps.googleapis.com/maps/api/staticmap?center=48.858271,2.294264&amp;size=640x300&amp;sensor=true&amp;zoom=16" style="visibility:hidden" alt=""/>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- END STATIC PORTLET-->
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<!-- BEGIN ROUTES PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Routes
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<form class="form-inline margin-bottom-10" action="javascript:;">
-								<input type="button" id="gmap_routes_start" class="btn blue" value="Start Routing"/>
-							</form>
-							<div class="label label-danger visible-ie8">
-								 Not supported in Internet Explorer 8
-							</div>
-							<div id="gmap_routes" class="gmaps">
-							</div>
-							<ol id="gmap_routes_instructions">
-							</ol>
-						</div>
-					</div>
-					<!-- END ROUTES PORTLET-->
-				</div>
-				<div class="col-md-6">
-					<!-- BEGIN GEOCODING PORTLET-->
-					<div class="portlet light">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Geocoding
-							</div>
-							<div class="tools">
-								<a href="javascript:;" class="collapse">
-								</a>
-								<a href="#portlet-config" data-toggle="modal" class="config">
-								</a>
-								<a href="javascript:;" class="reload">
-								</a>
-								<a href="javascript:;" class="remove">
-								</a>
-							</div>
-						</div>
-						<div class="portlet-body">
-							<form class="form-inline margin-bottom-10" action="javascript:;">
-								<div class="input-group">
-									<input type="text" class="form-control" id="gmap_geocoding_address" placeholder="address...">
-									<span class="input-group-btn">
-									<button class="btn blue" id="gmap_geocoding_btn"><i class="fa fa-search"></i>
-									</span>
-								</div>
-							</form>
-							<div id="gmap_geocoding" class="gmaps">
-							</div>
-						</div>
-					</div>
-					<!-- END GEOCODING PORTLET-->
-				</div>
-			</div>
-			<!-- END PAGE CONTENT INNER -->
-		</div>
         </div>
     </div>
-    </span>
 </asp:Content>
