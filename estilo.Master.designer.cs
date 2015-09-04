@@ -76,6 +76,42 @@ namespace Sonsv {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liBuscarSolicitud;
         
         /// <summary>
+        /// liAuditorias control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liAuditorias;
+        
+        /// <summary>
+        /// liSolPendientes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liSolPendientes;
+        
+        /// <summary>
+        /// liSolAprobadas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liSolAprobadas;
+        
+        /// <summary>
+        /// liReplicas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl liReplicas;
+        
+        /// <summary>
         /// lblSubtitulo control.
         /// </summary>
         /// <remarks>

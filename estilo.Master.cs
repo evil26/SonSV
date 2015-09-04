@@ -30,6 +30,21 @@ namespace Sonsv
                     liAlta.Attributes.Add("class", "active open");
                     liBuscarSolicitud.Attributes.Add("class", "active");
                     break;
+                case "Solicitudes Pendientes":
+                    lblSubtitulo.InnerText = "Catalogo de Solicitudes Pendi";
+                    liAuditorias.Attributes.Add("class", "active open");
+                    liSolPendientes.Attributes.Add("class", "active");
+                    break;
+                case "Solicitudes Aprobadas":
+                    lblSubtitulo.InnerText = "Visualiza cualquier solicitud del estado de sonora";
+                    liAuditorias.Attributes.Add("class", "active open");
+                    liSolAprobadas.Attributes.Add("class", "active");
+                    break;
+                case "Replicas":
+                    lblSubtitulo.InnerText = "Visualiza cualquier solicitud del estado de sonora";
+                    liAuditorias.Attributes.Add("class", "active open");
+                    liReplicas.Attributes.Add("class", "active");
+                    break;
                 //case "AltaSolicitud":
                 //    liSolicitar.Attributes.Add("class", "dropdown dropdown-fw open selected");
                 //    break;

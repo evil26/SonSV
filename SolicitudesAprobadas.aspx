@@ -1,7 +1,7 @@
-﻿<%@ Page Title="Buscar Solicitud" Language="C#" MasterPageFile="~/estilo.Master" AutoEventWireup="true" CodeBehind="BuscarSolicitud.aspx.cs" Inherits="Sonsv.BuscarSolicitud" %>
+﻿<%@ Page Title="Solicitudes Aprobadas" Language="C#" MasterPageFile="~/estilo.Master" AutoEventWireup="true" CodeBehind="SolicitudesAprobadas.aspx.cs" Inherits="Sonsv.SolicitudesAprobadas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-       <!-- PRELOADER-->
+    <!-- PRELOADER-->
     <style type="text/css">
         #loading {
             width: 100%;
@@ -30,7 +30,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div id="loading">
+    <div id="loading">
         <img id="loading-image" src="assets/admin/layout4/img/loader.gif" alt="Loading..." />
     </div>
     <div class="row">

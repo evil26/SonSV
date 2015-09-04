@@ -1,7 +1,6 @@
-﻿<%@ Page Title="Buscar Solicitud" Language="C#" MasterPageFile="~/estilo.Master" AutoEventWireup="true" CodeBehind="BuscarSolicitud.aspx.cs" Inherits="Sonsv.BuscarSolicitud" %>
-
+﻿<%@ Page Title="Solicitudes Pendientes" Language="C#" MasterPageFile="~/estilo.Master" AutoEventWireup="true" CodeBehind="SolicitudesPendientes.aspx.cs" Inherits="Sonsv.SolicitudesPendientes" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-       <!-- PRELOADER-->
+        <!-- PRELOADER-->
     <style type="text/css">
         #loading {
             width: 100%;

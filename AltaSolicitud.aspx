@@ -1,6 +1,33 @@
 ﻿<%@ Page Title="AltaSolicitud" Language="C#" MasterPageFile="~/estilo.Master" AutoEventWireup="true" CodeBehind="AltaSolicitud.aspx.cs" Inherits="Sonsv.AltaSolicitud" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+        <!-- PRELOADER-->
+    <style type="text/css">
+        #loading {
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            display: block;
+            z-index: 99;
+            background-color: #fff;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px; /* future proofing */
+            -khtml-border-radius: 10px;
+        }
+
+        #loading-image {
+            position: absolute;
+            top: 40%;
+            left: 45%;
+            z-index: 100;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () { document.getElementById("loading").style.display = "none" }
+    </script>
     <script>
         var geocoder;
         var map;
@@ -37,6 +64,9 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+        <div id="loading">
+        <img id="loading-image" src="assets/admin/layout4/img/loader.gif" alt="Loading..." />
+    </div>
     <div class="row">
         <div class="col-md-7">
             <div class="portlet light">

@@ -1,7 +1,6 @@
-﻿<%@ Page Title="Buscar Solicitud" Language="C#" MasterPageFile="~/estilo.Master" AutoEventWireup="true" CodeBehind="BuscarSolicitud.aspx.cs" Inherits="Sonsv.BuscarSolicitud" %>
-
+﻿<%@ Page Title="Replicas" Language="C#" MasterPageFile="~/estilo.Master" AutoEventWireup="true" CodeBehind="Replicas.aspx.cs" Inherits="Sonsv.Replicas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-       <!-- PRELOADER-->
+        <!-- PRELOADER-->
     <style type="text/css">
         #loading {
             width: 100%;
@@ -33,7 +32,7 @@
         <div id="loading">
         <img id="loading-image" src="assets/admin/layout4/img/loader.gif" alt="Loading..." />
     </div>
-    <div class="row">
+   <div class="row">
         <div class="col-md-12">
             <!-- BEGIN EXAMPLE TABLE PORTLET-->
             <div class="portlet box blue-hoki">

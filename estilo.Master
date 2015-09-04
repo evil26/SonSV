@@ -41,6 +41,7 @@
     <!-- END THEME STYLES -->
     <link rel="shortcut icon" href="favicon.ico" />
     <asp:ContentPlaceHolder ID="head" runat="server">
+
     </asp:ContentPlaceHolder>
 </head>
 <!-- END HEAD -->
@@ -160,21 +161,21 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li id="liAuditorias" runat="server">
                         <a href="javascript:;">
                             <i class="icon-rocket"></i>
                             <span class="title">Auditorias</span>
                             <span class="arrow"></span>
                         </a>
                         <ul class="sub-menu">
-                            <li>
-                                <a href="#">Solicitudes Pendientes</a>
+                            <li id="liSolPendientes" runat="server">
+                                <a href="SolicitudesPendientes.aspx">Solicitudes Pendientes</a>
                             </li>
-                            <li>
-                                <a href="#">Solicitudes Aprobadas</a>
+                            <li id="liSolAprobadas" runat="server">
+                                <a href="SolicitudesAprobadas.aspx">Solicitudes Aprobadas</a>
                             </li>
-                            <li>
-                                <a href="#">Replicas</a>
+                            <li id="liReplicas" runat="server">
+                                <a href="Replicas.aspx">Replicas</a>
                             </li>
                         </ul>
                     </li>

@@ -86,6 +86,7 @@
     <Content Include="assets\admin\layout4\img\icon-img-down.png" />
     <Content Include="assets\admin\layout4\img\icon-img-up.png" />
     <Content Include="assets\admin\layout4\img\inbox-nav-arrow-blue.png" />
+    <Content Include="assets\admin\layout4\img\loader.gif" />
     <Content Include="assets\admin\layout4\img\loading-spinner-blue.gif" />
     <Content Include="assets\admin\layout4\img\loading-spinner-default.gif" />
     <Content Include="assets\admin\layout4\img\loading-spinner-grey.gif" />
@@ -3884,6 +3885,9 @@
     <Content Include="assets\global\scripts\metronic.js" />
     <Content Include="BuscarSolicitud.aspx" />
     <Content Include="index.aspx" />
+    <Content Include="Replicas.aspx" />
+    <Content Include="SolicitudesAprobadas.aspx" />
+    <Content Include="SolicitudesPendientes.aspx" />
     <Content Include="Tablero.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -3915,6 +3919,27 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Replicas.aspx.cs">
+      <DependentUpon>Replicas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Replicas.aspx.designer.cs">
+      <DependentUpon>Replicas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudesAprobadas.aspx.cs">
+      <DependentUpon>SolicitudesAprobadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SolicitudesAprobadas.aspx.designer.cs">
+      <DependentUpon>SolicitudesAprobadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicitudesPendientes.aspx.cs">
+      <DependentUpon>SolicitudesPendientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SolicitudesPendientes.aspx.designer.cs">
+      <DependentUpon>SolicitudesPendientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tablero.aspx.cs">
       <DependentUpon>Tablero.aspx</DependentUpon>
