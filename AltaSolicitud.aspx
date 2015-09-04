@@ -27,7 +27,7 @@
                     var latitude = results[0].geometry.location.lat();
                     var longitude = results[0].geometry.location.lng();
                     //alert(latitude + ' ' + longitude);
-                    document.getElementById("lbllatitud").innerText = latitude + ',' + longitude;
+                    document.getElementById("lbllatitud").value = latitude + ',' + longitude;
                 }
                 else {
                     //alert("Geocode was not successful for the following reason: " + status);
@@ -121,7 +121,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </form>
                     <button type="button" class="btn btn-success">Enviar</button>
@@ -149,8 +149,9 @@
                             <div class="col-md-2">
                                 <button type="button" class="btn btn-success" onclick="codeAddress()">Buscar</button>
                             </div>
-                            <div class="col-md-2">
-                                <label id="lbllatitud"></label>
+                            <div class="col-md-5">
+                                <%--<label id="lbllatitud"></label>--%>
+                                <input type="text" style="font-size:small" class="form-control" readonly id="lbllatitud" placeholder="Coordenadas"/>
                             </div>
                         </div>
                     </form>
